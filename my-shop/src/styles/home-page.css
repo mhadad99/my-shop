@@ -1,0 +1,6 @@
+.hero-pic {
+  object-fit: none;
+  height: 40em;
+  width: 100%;
+  object-position: top center;
+}

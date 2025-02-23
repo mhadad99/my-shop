@@ -1,8 +1,13 @@
+import { createRoot } from "react-dom/client";
+import { MainLayout } from "./layout/MainLayout";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/index.css";
+import "./styles/home-page.css";
+import { Provider } from "react-redux";
+import { myStore } from "./store";
 
-import { createRoot } from 'react-dom/client'
-import { MainLayout } from './layout/MainLayout'
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./styles/index.css"
-createRoot( document.getElementById( 'root' ) ).render(
-  <MainLayout />,
-)
+createRoot(document.getElementById("root")).render(
+  <Provider store={myStore}>
+    <MainLayout />
+  </Provider>
+);

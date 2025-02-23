@@ -1,67 +1,73 @@
-import hero from '../assets/hero.png'
+import { Link } from "react-router";
+import hero from "../assets/home-pics/hero.png";
 
 export default function HomeHero() {
   return (
-          <div className="container my-5">
-            <div className="row g-4">
-              <div className="col-md-6">
-                <div className="row mb-4">
-                  <div className="col">
-                    <button className="btn btn-outline-secondary rounded-5">
-                      Create your own
-                    </button>
-                  </div>
-                </div>
-    
-                <div className="row">
-                  <div className="col-12 mb-4">
-                    <div className="title-section justify-content-end">
-                      <h1 className="display-5 fw-bold">
-                        Make the most
-                        <br />
-                        of o <br />
-                        printing
-                      </h1>
-                    </div>
-                  </div>
-    
-                  <div className="col-12 mb-4">
-                    <h3 className="text-muted fs-6">
-                      What's more, we do it right! A full administration printing
-                      background. Print shirts for yourself or your online business
-                    </h3>
-                  </div>
-    
-                  <div className="col-12 mb-4">
-                    <div>
-                      <button className="btn btn-success me-2">Shop Now</button>
-                      <span className="text-dark fw-bold">How We Work </span>
-                    </div>
-                  </div>
-    
-                  <div className="col-12">
-                    <div className="row">
-                      <div className="col-6 col-md-5 col-lg-3">
-                        <h2 className="fw-bold">4k+</h2>
-                        <p className="text-muted mb-0">collection</p>
-                      </div>
-                      <div className="col-6 col-md-5 col-lg-3">
-                        <h2 className="fw-bold">9k+</h2>
-                        <p className="text-muted mb-0">items trusted to deliver</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+    <div style={{ backgroundColor: "#f2f0f1" }}>
+      <div className="row container mx-auto justify-content-center">
+        <div className="col-md-6 py-5">
+          <div className="row">
+            <div className="col-12 mb-4">
+              <div className="title-section justify-content-end">
+                <h1
+                  className="display-5 fw-bold"
+                  style={{ fontFamily: "integralcf, sans-serif" }}
+                >
+                  FIND CLOTHES <br />
+                  THAT MATCHES <br />
+                  YOUR STYLE
+                </h1>
               </div>
-    
-              <div className="col-md-6">
-                <img
-                  src={hero}
-                  alt="Side Image"
-                  className="img-fluid h-100 rounded-3"
-                />
+            </div>
+
+            <div className="col-12 mb-4">
+              <h3 className="text-muted fs-6">
+                Browse through our diverse range of meticulously crafted
+                garments, designed to bring out your individuality and cater to
+                your sense of style.
+              </h3>
+            </div>
+
+            <div className="col-12  my-5">
+              <Link to="products" ><button
+                className="btn btn-dark w-50 rounded-5 me-2 "
+                style={{
+                  height: " 52px",
+                }}
+              >
+                Shop Now
+              </button>
+              </Link>
+            </div>
+
+            <div className="col-12">
+              <div className="row">
+                <div className="col-4 col-md-4 col-lg-3">
+                  <h4 className="fw-bold">200+</h4>
+                  <p className="text-muted mb-0">International Brands</p>
+                </div>
+                <div className="col-4 col-md-4 col-lg-3">
+                  <h4 className="fw-bold">2,000+</h4>
+                  <p className="text-muted mb-0">High-Quality Products</p>
+                </div>
+                <div className="col-4 col-md-4 col-lg-3">
+                  <h4 className="fw-bold">30,0000+</h4>
+                  <p className="text-muted mb-0">Happy Customers</p>
+                </div>
               </div>
             </div>
           </div>
-  )
+        </div>
+
+        <div className="col-md-6">
+          <img
+            src={hero}
+            alt="Side Image"
+            className="img-fluid hero-pic"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

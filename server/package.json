@@ -1,16 +1,19 @@
 {
-	"name": "server",
-	"version": "1.0.0",
-	"main": "index.js",
-	"scripts": {
-		"start": "json-server data.json -w -p 3005",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"description": "",
-	"dependencies": {
-		"json-server": "^1.0.0-beta.3"
-	}
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server data.json -p 3005",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "json-server": "^1.0.0-beta.3"
+  }
 }

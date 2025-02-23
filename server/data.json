@@ -2,33 +2,234 @@
   "products": [
     {
       "id": "1",
-      "name": "Book edited",
+      "name": "T-Shirt",
+      "image": "https://m.media-amazon.com/images/I/41BkfeDyKTL._SR290,290_.jpg",
       "price": 200,
-      "quantity": 20
+      "quantity": 20,
+      "rating": 0.5,
+      "numsReviews": 15,
+      "description": "A comfortable cotton T-shirt."
     },
     {
       "id": "4",
-      "name": "Watch",
+      "name": "Wrist Watch",
+      "image": "https://m.media-amazon.com/images/I/31AqQfaBbnL._SR290,290_.jpg",
       "price": 900,
-      "quantity": 36
+      "quantity": 0,
+      "rating": 4.8,
+      "numsReviews": 30,
+      "description": "A stylish wrist watch with leather strap."
     },
     {
       "id": "2f4d",
-      "name": "orange",
-      "price": "50",
-      "quantity": "60"
+      "name": "Jacket",
+      "image": "https://m.media-amazon.com/images/I/41sm+hzSHfL._AC_SY350_.jpg",
+      "price": 50,
+      "quantity": 60,
+      "rating": 2,
+      "numsReviews": 18,
+      "description": "A warm and cozy jacket for winter."
     },
     {
-      "id": "698b",
-      "name": "dnjso",
-      "price": "123",
-      "quantity": "75"
+      "id": "34",
+      "name": "T-Shirt",
+      "image": "https://m.media-amazon.com/images/I/41BkfeDyKTL._SR290,290_.jpg",
+      "price": 200,
+      "quantity": 20,
+      "rating": 1.2,
+      "numsReviews": 15,
+      "description": "A comfortable cotton T-shirt."
     },
     {
-      "id": "ac60",
+      "id": "44",
+      "name": "Wrist Watch",
+      "image": "https://m.media-amazon.com/images/I/31AqQfaBbnL._SR290,290_.jpg",
+      "price": 900,
+      "quantity": 36,
+      "rating": 4.8,
+      "numsReviews": 30,
+      "description": "A stylish wrist watch with leather strap."
+    },
+    {
+      "id": "46",
+      "name": "Jacket",
+      "image": "https://m.media-amazon.com/images/I/41sm+hzSHfL._AC_SY350_.jpg",
+      "price": 50,
+      "quantity": 60,
+      "rating": 4,
+      "numsReviews": 18,
+      "description": "A warm and cozy jacket for winter."
+    },
+    {
+      "id": "45",
+      "name": "Sneakers",
+      "image": "https://m.media-amazon.com/images/I/41sm+hzSHfL._AC_SY350_.jpg",
+      "price": 120,
+      "quantity": 45,
+      "rating": 4.5,
+      "numsReviews": 23,
+      "description": "Comfortable and stylish sneakers for everyday use."
+    },
+    {
+      "id": "d18f",
       "name": "",
       "price": "",
-      "quantity": ""
+      "quantity": "",
+      "image": "",
+      "rating": 0,
+      "numsReviews": 0
+    }
+  ],
+  "users": [
+    {
+      "name": "Ahmed Hassan",
+      "email": "ahmed.hassan@example.com",
+      "username": "ahmedhassan",
+      "password": "123",
+      "role": "admin",
+      "id": "9744"
+    },
+    {
+      "name": "Sara Ali",
+      "email": "sara.ali@example.com",
+      "username": "saraali",
+      "password": "123",
+      "role": "admin",
+      "id": "237a"
+    },
+    {
+      "name": "Mohamed Salah",
+      "email": "mohamed.salah@example.com",
+      "username": "mohamedsalah",
+      "password": "123",
+      "role": "customer",
+      "id": "464f"
+    },
+    {
+      "name": "Fatma Youssef",
+      "email": "fatma.youssef@example.com",
+      "username": "fatmayoussef",
+      "password": "123",
+      "role": "admin",
+      "id": "1ef2"
+    },
+    {
+      "name": "Omar Khaled",
+      "email": "omar.khaled@example.com",
+      "username": "omarkhaled",
+      "password": "123",
+      "role": "customer",
+      "id": "419c"
+    },
+    {
+      "name": "Mona Ibrahim",
+      "email": "mona.ibrahim@example.com",
+      "username": "monaibrahim",
+      "password": "123",
+      "role": "admin",
+      "id": "5d99"
+    },
+    {
+      "name": "Khaled Ahmed",
+      "email": "khaled.ahmed@example.com",
+      "username": "khaledahmed",
+      "password": "123",
+      "role": "customer",
+      "id": "053c"
+    },
+    {
+      "name": "Nour El-Din",
+      "email": "nour.eldin@example.com",
+      "username": "noureldin",
+      "password": "1234567",
+      "role": "admin",
+      "id": "48e3"
+    },
+    {
+      "name": "Hana Mostafa",
+      "email": "hana.mostafa@example.com",
+      "username": "hanamostafa",
+      "password": "123",
+      "role": "customer",
+      "id": "0d26"
+    },
+    {
+      "name": "Youssef Tarek",
+      "email": "youssef.tarek@example.com",
+      "username": "yousseftarek",
+      "password": "123",
+      "role": "admin",
+      "id": "1770"
+    },
+    {
+      "id": "32",
+      "username": "",
+      "email": "hana.mostafac@example.com",
+      "password": "123",
+      "role": "customer"
+    },
+    {
+      "id": "262c",
+      "username": "s",
+      "email": "hana.mostafacs@example.com",
+      "password": "123",
+      "role": "customer"
+    },
+    {
+      "id": "810f",
+      "name": "Muhammad Hassan",
+      "email": "mhadad315@gmail.com",
+      "username": "haddad",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "b4cf",
+      "name": "haddad",
+      "email": "aa@gmail.com",
+      "username": "haddad",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "51c7",
+      "name": "",
+      "email": "",
+      "username": "",
+      "password": "",
+      "role": "user"
+    },
+    {
+      "id": "0a5c",
+      "name": "",
+      "email": "",
+      "username": "",
+      "password": "",
+      "role": "user"
+    },
+    {
+      "id": "00b7",
+      "name": "",
+      "email": "",
+      "username": "gg",
+      "password": "",
+      "role": "user"
+    },
+    {
+      "id": "4ba7",
+      "name": "",
+      "email": "",
+      "username": "",
+      "password": "",
+      "role": "user"
+    },
+    {
+      "id": "cca4",
+      "name": "",
+      "email": "f@s.c",
+      "username": "dsfgh",
+      "password": "",
+      "role": "user"
     }
   ]
 }
