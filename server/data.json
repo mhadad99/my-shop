@@ -23,12 +23,20 @@
       "name": "dnjso",
       "price": "123",
       "quantity": "75"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "username": "admin",
+      "password": "admin123"
     },
     {
-      "id": "ac60",
-      "name": "",
-      "price": "",
-      "quantity": ""
+      "id": "2",
+      "email": "user@example.com",
+      "username": "user",
+      "password": "user123"
     }
   ]
 }
