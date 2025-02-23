@@ -1,4 +1,4 @@
-export const validateInput = function (input, type) {
+export const validateInput = function (input: string, type: string) {
   let value = input.trim();
 
   if (value === "") {
@@ -18,7 +18,7 @@ export const validateInput = function (input, type) {
       break;
 
     case "email":
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value)) {
         return false;
       }
       break;
@@ -30,7 +30,7 @@ export const validateInput = function (input, type) {
       break;
 
     case "number":
-      if (isNaN(value) || value <= 0) {
+      if (isNaN(Number(value)) || Number(value) <= 0) {
         return false;
       }
       break;

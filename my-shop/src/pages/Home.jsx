@@ -14,13 +14,11 @@ import {
   getAllProductsAction,
 } from "../store/productSlice";
 import ProductCard from "../components/ProductCard";
-import { registerUser, signinUser } from "../store/userSlice";
 
 export function Home() {
   const { products, isLoading, errors } = useSelector(
     (store) => store.productSlice
   );
-  const { users } = useSelector((store) => store.userSlice);
   //
   const dispatch = useDispatch();
   useEffect(() => {

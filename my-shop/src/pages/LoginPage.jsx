@@ -9,7 +9,6 @@ import { validateInput } from "../SharedLayout/func";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordError, setPasswordError] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isLoading, error, user } = useSelector((state) => state.authSlice);
@@ -22,14 +21,12 @@ const LoginPage = () => {
   }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateInput(password, "password")) {
-      setPasswordError(true);
+    if (!validateInput(password, "password") || !validateInput(email, "email")) {
     } else {
-      setPasswordError(false);
-      dispatch(loginAction({ email, password }))
-        .unwrap()
-        .then(() => navigate("/"))
-        .catch((err) => console.error("Login failed:", err));
+    dispatch(loginAction({ email, password }))
+      .unwrap()
+      .then(() => navigate("/"))
+      .catch((err) => console.error("Login failed:", err));
     }
   };
 
@@ -45,6 +42,8 @@ const LoginPage = () => {
               <Form.Control
                 type="email"
                 placeholder="Enter Email"
+                isValid={email && validateInput(email, "email")}
+                isInvalid={email && !validateInput(email, "email")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>
@@ -55,9 +54,11 @@ const LoginPage = () => {
                 type="password"
                 placeholder="Enter Password"
                 value={password}
+                isInvalid={password && !validateInput(password, "password")}
+                isValid={password && validateInput(password, "password")}
                 onChange={(e) => setPassword(e.target.value)}
               ></Form.Control>
-              {passwordError && <div>password not v</div>}
+         
             </Form.Group>
             <Button
               className="my-3"

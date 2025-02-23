@@ -16,6 +16,7 @@ import { SharedLayout } from "../SharedLayout/SharedLayout";
 import { SignIn } from "../pages/SignIn";
 import LoginPage from "../pages/LoginPage";
 import RegisterForm from "../pages/RegisterForm";
+import Cart from "../pages/Cart";
 
 export function MainLayout() {
   return (
@@ -26,7 +27,7 @@ export function MainLayout() {
           <Route path="products" element={<Products />} />
           <Route path="products/:id" element={<ProductDetails />} />
           <Route path="products/:id/edit" element={<ProductForm />} />
-          <Route path="signin" element={<SignIn />} />
+          <Route path="cart" element={<Cart />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterForm />} />
           <Route path="*" element={<NotFound />} />

@@ -35,7 +35,7 @@
       "name": "T-Shirt",
       "image": "https://m.media-amazon.com/images/I/41BkfeDyKTL._SR290,290_.jpg",
       "price": 200,
-      "quantity": 20,
+      "quantity": "22",
       "rating": 1.2,
       "numsReviews": 15,
       "description": "A comfortable cotton T-shirt."
@@ -69,15 +69,6 @@
       "rating": 4.5,
       "numsReviews": 23,
       "description": "Comfortable and stylish sneakers for everyday use."
-    },
-    {
-      "id": "d18f",
-      "name": "",
-      "price": "",
-      "quantity": "",
-      "image": "",
-      "rating": 0,
-      "numsReviews": 0
     }
   ],
   "users": [
@@ -85,7 +76,7 @@
       "name": "Ahmed Hassan",
       "email": "ahmed.hassan@example.com",
       "username": "ahmedhassan",
-      "password": "123",
+      "password": "123456",
       "role": "admin",
       "id": "9744"
     },
@@ -141,7 +132,7 @@
       "name": "Nour El-Din",
       "email": "nour.eldin@example.com",
       "username": "noureldin",
-      "password": "1234567",
+      "password": "123456",
       "role": "admin",
       "id": "48e3"
     },

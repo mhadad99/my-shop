@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Container, Form, InputGroup, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFire, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faFire, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../store/authSlice";
 
 export function Header() {
-  const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((store) => store.authSlice);
@@ -18,13 +17,6 @@ export function Header() {
   };
 
 
-  const handleSearch = (e) => {
-    const value = e.target.value;
-    setSearchTerm(value);
-    if (onSearch) {
-      onSearch(value);
-    }
-  };
   return (
     <section>
       <div className="p-2 d-flex justify-content-center fw-bolder text-light align-items-center bg-dark">
@@ -53,25 +45,15 @@ export function Header() {
               <NavLink className="nav-link" to="/products">
                 Products
               </NavLink>
-              <NavLink className="nav-link" to="/signin">
+              <NavLink className="nav-link" to="/">
                 About
               </NavLink>
             </Nav>
-            <div className="relative max-w-2xl w-full  my-4">
-              <div className="relative rounded-5 p-2  bg-gray border rounded-5 focus:outline-none bg-light">
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  className="text-secondary mx-2"
-                />
-                <input
-                  type="text"
-                  placeholder="Search for products..."
-                  value={searchTerm}
-                  onChange={handleSearch}
-                  className="border-0 focus:border-none focus:outline-none bg-transparent  w-75"
-                />
-              </div>
-            </div>
+            {user
+            ? <Link to="/cart"><FontAwesomeIcon icon={faCartShopping} className="text-dark mx-3 fs-5" /></Link>
+            :<></>
+            
+          }
 
             {user ? (
                 <>
@@ -87,9 +69,10 @@ export function Header() {
                 </>
               ) : (
                 <NavLink className="btn btn-dark mx-3" to="/login">
-                  Sign In
+                  Login
                 </NavLink>
               )}
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
