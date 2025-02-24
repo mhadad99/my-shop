@@ -74,7 +74,7 @@ export function ProductDetails() {
             <ListGroup.Item>
               <Button
                 className="btn btn-dark col-12"
-                disabled={product.quantity === 0 || (user && user.role == "admin") }
+                disabled={product.quantity === 0 || !user || (user && user.role === "admin")}
                 type="button"
                 onClick={handleAddToCart}
               >

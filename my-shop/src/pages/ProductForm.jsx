@@ -40,8 +40,6 @@ export function ProductForm() {
         return value.trim() !== "";
       case "number":
         return !isNaN(value) && value > 0;
-      case "url":
-        return value.trim() !== "" && value.startsWith("http");
       default:
         return false;
     }
@@ -53,7 +51,7 @@ export function ProductForm() {
       !validateInput(formData.name, "text") ||
       !validateInput(formData.price, "number") ||
       !validateInput(formData.quantity, "number") ||
-      !validateInput(formData.image, "url") ||
+      !validateInput(formData.image, "text") ||
       !validateInput(formData.rating, "number") ||
       !validateInput(formData.numsReviews, "number")
     ) {
@@ -141,8 +139,8 @@ export function ProductForm() {
             onChange={inputHandler}
             type="text"
             placeholder="Enter Product Image URL"
-            isInvalid={formData.image && !validateInput(formData.image, "url")}
-            isValid={formData.image && validateInput(formData.image, "url")}
+            isInvalid={formData.image && !validateInput(formData.image, "text")}
+            isValid={formData.image && validateInput(formData.image, "text")}
           />
         </Form.Group>
 

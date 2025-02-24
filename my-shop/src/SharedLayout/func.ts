@@ -12,7 +12,7 @@ export const validateInput = function (input: string, type: string) {
       }
       break;
     case "username":
-      if (!/^[0-9A-Za-z]{6,16}$/.test(value)) {
+      if (!/^[0-9A-Za-z]{4,16}$/.test(value)) {
         return false;
       }
       break;
@@ -34,6 +34,8 @@ export const validateInput = function (input: string, type: string) {
         return false;
       }
       break;
+
+
 
     default:
       break;

@@ -1,13 +1,11 @@
 import { Card, Button } from "react-bootstrap";
 import React from "react";
 import Rating from "./Rating";
-import { FaEdit } from "react-icons/fa";
-import { IoEye } from "react-icons/io5";
-import { MdDelete } from "react-icons/md";
-import { Link } from "react-router";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../store/cartSlice";
 
 export default function ProductCard({ product, children }) {
+  const dispatch = useDispatch()
   const { user } = useSelector((store) => store.authSlice);
 
   const handleAddToCart = () => {

@@ -2,8 +2,8 @@
   "products": [
     {
       "id": "1",
-      "name": "T-Shirt",
-      "image": "https://m.media-amazon.com/images/I/41BkfeDyKTL._SR290,290_.jpg",
+      "name": "T-SHIRT WITH TAPE DETAILS",
+      "image": "../productImage/1.png",
       "price": 200,
       "quantity": 20,
       "rating": 0.5,
@@ -12,8 +12,8 @@
     },
     {
       "id": "4",
-      "name": "Wrist Watch",
-      "image": "https://m.media-amazon.com/images/I/31AqQfaBbnL._SR290,290_.jpg",
+      "name": "SKINNY FIT JEANS",
+      "image": "../productImage/2.png",
       "price": 900,
       "quantity": 0,
       "rating": 4.8,
@@ -22,8 +22,8 @@
     },
     {
       "id": "2f4d",
-      "name": "Jacket",
-      "image": "https://m.media-amazon.com/images/I/41sm+hzSHfL._AC_SY350_.jpg",
+      "name": "CHECKERED SHIRT   edited",
+      "image": "../productImage/7.png",
       "price": 50,
       "quantity": 60,
       "rating": 2,
@@ -32,8 +32,8 @@
     },
     {
       "id": "34",
-      "name": "T-Shirt",
-      "image": "https://m.media-amazon.com/images/I/41BkfeDyKTL._SR290,290_.jpg",
+      "name": "SLEEVE STRIPED T-SHIRT",
+      "image": "../productImage/4.png",
       "price": 200,
       "quantity": "22",
       "rating": 1.2,
@@ -42,8 +42,8 @@
     },
     {
       "id": "44",
-      "name": "Wrist Watch",
-      "image": "https://m.media-amazon.com/images/I/31AqQfaBbnL._SR290,290_.jpg",
+      "name": "VERTICAL STRIPED SHIRT",
+      "image": "../productImage/5.png",
       "price": 900,
       "quantity": 36,
       "rating": 4.8,
@@ -52,8 +52,8 @@
     },
     {
       "id": "46",
-      "name": "Jacket",
-      "image": "https://m.media-amazon.com/images/I/41sm+hzSHfL._AC_SY350_.jpg",
+      "name": "COURAGE GRAPHIC T-SHIRT",
+      "image": "../productImage/6.png",
       "price": 50,
       "quantity": 60,
       "rating": 4,
@@ -61,14 +61,14 @@
       "description": "A warm and cozy jacket for winter."
     },
     {
-      "id": "45",
-      "name": "Sneakers",
-      "image": "https://m.media-amazon.com/images/I/41sm+hzSHfL._AC_SY350_.jpg",
-      "price": 120,
-      "quantity": 45,
-      "rating": 4.5,
-      "numsReviews": 23,
-      "description": "Comfortable and stylish sneakers for everyday use."
+      "id": "0594",
+      "name": "NEW T-SHIRT",
+      "description": "A comfortable cotton T-shirt.",
+      "price": "200",
+      "quantity": "22",
+      "image": "../productImage/img1.png",
+      "rating": "4",
+      "numsReviews": "12"
     }
   ],
   "users": [
@@ -81,34 +81,18 @@
       "id": "9744"
     },
     {
-      "name": "Sara Ali",
-      "email": "sara.ali@example.com",
-      "username": "saraali",
-      "password": "123",
-      "role": "admin",
-      "id": "237a"
-    },
-    {
       "name": "Mohamed Salah",
       "email": "mohamed.salah@example.com",
       "username": "mohamedsalah",
-      "password": "123",
+      "password": "123456",
       "role": "customer",
       "id": "464f"
-    },
-    {
-      "name": "Fatma Youssef",
-      "email": "fatma.youssef@example.com",
-      "username": "fatmayoussef",
-      "password": "123",
-      "role": "admin",
-      "id": "1ef2"
     },
     {
       "name": "Omar Khaled",
       "email": "omar.khaled@example.com",
       "username": "omarkhaled",
-      "password": "123",
+      "password": "123456",
       "role": "customer",
       "id": "419c"
     },
@@ -129,97 +113,43 @@
       "id": "053c"
     },
     {
-      "name": "Nour El-Din",
-      "email": "nour.eldin@example.com",
-      "username": "noureldin",
+      "id": "53b8",
+      "name": "muhammad",
+      "email": "m@gmail.com",
+      "username": "mhassan",
       "password": "123456",
-      "role": "admin",
-      "id": "48e3"
-    },
-    {
-      "name": "Hana Mostafa",
-      "email": "hana.mostafa@example.com",
-      "username": "hanamostafa",
-      "password": "123",
-      "role": "customer",
-      "id": "0d26"
-    },
-    {
-      "name": "Youssef Tarek",
-      "email": "youssef.tarek@example.com",
-      "username": "yousseftarek",
-      "password": "123",
-      "role": "admin",
-      "id": "1770"
-    },
-    {
-      "id": "32",
-      "username": "",
-      "email": "hana.mostafac@example.com",
-      "password": "123",
-      "role": "customer"
-    },
-    {
-      "id": "262c",
-      "username": "s",
-      "email": "hana.mostafacs@example.com",
-      "password": "123",
-      "role": "customer"
-    },
-    {
-      "id": "810f",
-      "name": "Muhammad Hassan",
-      "email": "mhadad315@gmail.com",
-      "username": "haddad",
-      "password": "123",
       "role": "user"
     },
     {
-      "id": "b4cf",
-      "name": "haddad",
-      "email": "aa@gmail.com",
-      "username": "haddad",
-      "password": "123",
+      "id": "9668",
+      "name": "Ahmed",
+      "email": "ahmed@gmail.com",
+      "username": "ahmed9",
+      "password": "123456",
       "role": "user"
     },
     {
-      "id": "51c7",
-      "name": "",
-      "email": "",
-      "username": "",
-      "password": "",
+      "id": "1954",
+      "name": "ahmed",
+      "email": "ahmed35@gmail.com",
+      "username": "ahmed94",
+      "password": "123456",
       "role": "user"
     },
     {
-      "id": "0a5c",
-      "name": "",
-      "email": "",
-      "username": "",
-      "password": "",
+      "id": "4553",
+      "name": "Ahmed",
+      "email": "ahmed12@gmail.com",
+      "username": "ahmedhasan",
+      "password": "123456",
       "role": "user"
     },
     {
-      "id": "00b7",
-      "name": "",
-      "email": "",
-      "username": "gg",
-      "password": "",
-      "role": "user"
-    },
-    {
-      "id": "4ba7",
-      "name": "",
-      "email": "",
-      "username": "",
-      "password": "",
-      "role": "user"
-    },
-    {
-      "id": "cca4",
-      "name": "",
-      "email": "f@s.c",
-      "username": "dsfgh",
-      "password": "",
+      "id": "49c0",
+      "name": "Ahmed",
+      "email": "ahmed45@gmail.com",
+      "username": "ahmed321",
+      "password": "123456",
       "role": "user"
     }
   ]

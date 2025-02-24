@@ -1,18 +1,9 @@
 import React, { useEffect, useState } from "react";
 import HomeHero from "../components/HomeHero";
-import ProductsHome from "../components/ProductsHome";
-import { getAllProducts } from "../api/product_api";
 import { Col, Row, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { FaEdit } from "react-icons/fa";
-import { IoEye } from "react-icons/io5";
-import { MdDelete } from "react-icons/md";
 import { Brand } from "../components/Brand";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  deleteProductAction,
-  getAllProductsAction,
-} from "../store/productSlice";
+import { getAllProductsAction } from "../store/productSlice";
 import ProductCard from "../components/ProductCard";
 
 export function Home() {
@@ -22,16 +13,12 @@ export function Home() {
   //
   const dispatch = useDispatch();
   useEffect(() => {
-    // database ---
-    // dispatch(signinUser({ email: "hana.mostafa@example.com", password: "123" }));
-    // dispatch(registerUser({ username:"s",email: "hana.mostafacs@example.com", password: "123" }));
     dispatch(getAllProductsAction());
   }, []);
   return (
     <>
       <HomeHero></HomeHero>
       <Brand></Brand>
-      {/* <ProductsHome ></ProductsHome> */}
       <div className="text-center my-5">
         <h2 className="fw-bold mb-3">Our picks for you</h2>
         <p className="text-muted">

@@ -48,7 +48,7 @@ export function Products() {
         {!user ? (
           <></>
         ) : user.role == "admin" ? (
-          <Link to="0/edit" className="btn btn-outline-primary">
+          <Link to="0/edit" className="btn btn-outline-dark">
             Add New Product
           </Link>
         ) : (

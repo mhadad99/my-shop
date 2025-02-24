@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
   faFire,
-  faSearch,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -66,9 +65,9 @@ export function Header() {
               <NavLink className="nav-link" to="/products">
                 Products
               </NavLink>
-              <NavLink className="nav-link" to="/">
+              {/* <NavLink className="nav-link" to="/">
                 About
-              </NavLink>
+              </NavLink> */}
             </Nav>
             {user && (
               <Link to="/cart" className="position-relative mx-5">
