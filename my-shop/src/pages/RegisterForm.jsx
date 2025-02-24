@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { registerAction } from "../store/authSlice";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import Swal from "sweetalert2";
 import { validateInput } from "../SharedLayout/func";
 
 const RegisterForm = () => {
@@ -34,8 +35,18 @@ const RegisterForm = () => {
     } else {
       dispatch(registerAction(newUser))
         .unwrap()
-        .then(() => navigate("/"))
-        .catch((err) => console.error("Registration failed:", err));
+        .then(() => {
+          navigate("/");
+          Swal.fire("Success!", "You have registered successfully.", "success");
+        })
+        .catch((err) => {
+          console.error("Registration failed:", err);
+          Swal.fire(
+            "Error!",
+            "Registration failed. Please try again.",
+            "error"
+          );
+        });
     }
   };
 
@@ -86,8 +97,8 @@ const RegisterForm = () => {
                 type="password"
                 placeholder="Enter Password"
                 value={password}
-                                isInvalid={password && !validateInput(password, "password")}
-                                isValid={password && validateInput(password, "password")}
+                isInvalid={password && !validateInput(password, "password")}
+                isValid={password && validateInput(password, "password")}
                 onChange={(e) => setPassword(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -106,51 +117,6 @@ const RegisterForm = () => {
         </Col>
       </Row>
     </Container>
-    // <form onSubmit={handleSubmit}>
-    //   <div>
-    //     <label>Name:</label>
-    //     <input
-    //       type="text"
-    //       value={name}
-    //       onChange={(e) => setName(e.target.value)}
-    //     />
-    //   </div>
-    //   <div>
-    //     <label>Email:</label>
-    //     <input
-    //       type="email"
-    //       value={email}
-    //       onChange={(e) => setEmail(e.target.value)}
-    //     />
-    //   </div>
-    //   <div>
-    //     <label>Username:</label>
-    //     <input
-    //       type="text"
-    //       value={username}
-    //       onChange={(e) => setUsername(e.target.value)}
-    //     />
-    //   </div>
-    //   <div>
-    //     <label>Password:</label>
-    //     <input
-    //       type="password"
-    //       value={password}
-    //       onChange={(e) => setPassword(e.target.value)}
-    //     />
-    //   </div>
-    //   <div>
-    //     <label>Role:</label>
-    //     <select value={role} onChange={(e) => setRole(e.target.value)}>
-    //       <option value="user">User</option>
-    //       <option value="admin">Admin</option>
-    //     </select>
-    //   </div>
-    //   <button type="submit" disabled={isLoading}>
-    //     {isLoading ? "Registering..." : "Register"}
-    //   </button>
-    //   {error && <p style={{ color: "red" }}>{error}</p>}
-    // </form>
   );
 };
 

@@ -1,21 +1,30 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { FaStar } from "react-icons/fa6";
 import productImg from "../assets/1.jpg";
 import { Link, useParams } from "react-router-dom";
 import { getProductById } from "../api/product_api";
 import { Button, Col, Image, ListGroup, Row } from "react-bootstrap";
 import Rating from "../components/Rating";
+import { addToCart } from "../store/cartSlice";
+
 export function ProductDetails() {
   const { id } = useParams();
-
+  const dispatch = useDispatch();
   const [product, setProduct] = useState({});
+
   useEffect(() => {
     getProductById(id)
       .then((response) => setProduct(response.data))
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [id]);
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <div className="container">
       <Link to="/" className="btn btn-outline-dark my-3">
@@ -64,8 +73,9 @@ export function ProductDetails() {
             <ListGroup.Item>
               <Button
                 className="btn btn-dark col-12"
-                disabled={product.quantity == 0}
+                disabled={product.quantity === 0}
                 type="button"
+                onClick={handleAddToCart}
               >
                 Add To Cart
               </Button>

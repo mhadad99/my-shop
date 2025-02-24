@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginAction } from "../store/authSlice";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { FormContainer } from "../components/FormContainer";
+import Swal from "sweetalert2";
 import { validateInput } from "../SharedLayout/func";
 
 const LoginPage = () => {
@@ -21,12 +21,21 @@ const LoginPage = () => {
   }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateInput(password, "password") || !validateInput(email, "email")) {
+    if (
+      !validateInput(password, "password") ||
+      !validateInput(email, "email")
+    ) {
     } else {
-    dispatch(loginAction({ email, password }))
-      .unwrap()
-      .then(() => navigate("/"))
-      .catch((err) => console.error("Login failed:", err));
+      dispatch(loginAction({ email, password }))
+        .unwrap()
+        .then(() => {
+          navigate("/");
+          Swal.fire("Success!", "You have logged in successfully.", "success");
+        })
+        .catch((err) => {
+          console.error("Login failed:", err);
+          Swal.fire("Error!", "Login failed. Please try again.", "error");
+        });
     }
   };
 
@@ -58,7 +67,6 @@ const LoginPage = () => {
                 isValid={password && validateInput(password, "password")}
                 onChange={(e) => setPassword(e.target.value)}
               ></Form.Control>
-         
             </Form.Group>
             <Button
               className="my-3"

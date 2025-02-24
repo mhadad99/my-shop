@@ -10,6 +10,8 @@ import { useSelector } from "react-redux";
 export default function ProductCard({ product, children }) {
   const { user } = useSelector((store) => store.authSlice);
 
+  
+
   return (
     <Card className="my-3 p-3 rounded">
       <a href={`/products/${product.id}`} style={{ textDecoration: "none" }}>
