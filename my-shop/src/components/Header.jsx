@@ -6,6 +6,7 @@ import {
   faCartShopping,
   faFire,
   faSearch,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
@@ -70,18 +71,24 @@ export function Header() {
               </NavLink>
             </Nav>
             {user && (
-              <Link to="/cart">
+              <Link to="/cart" className="position-relative mx-5">
                 <FontAwesomeIcon
                   icon={faCartShopping}
                   className="text-dark mx-3 fs-5"
                 />
-                <span className="badge bg-danger">{cartItems.length}</span>
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {cartItems.length}
+                </span>
               </Link>
             )}
             {user ? (
               <>
-                <span className="nav-link fw-bold text-success">
-                  Welcome, {user.name}!
+                <span className="nav-link fw-bold text-success mx-2">
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    className="text-dark mx-3 fs-5"
+                  />{" "}
+                  {user.name}!
                 </span>
                 <button className="btn btn-danger mx-2" onClick={handleLogout}>
                   Logout

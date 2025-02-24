@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { FaStar } from "react-icons/fa6";
 import productImg from "../assets/1.jpg";
 import { Link, useParams } from "react-router-dom";
@@ -12,6 +12,7 @@ export function ProductDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [product, setProduct] = useState({});
+  const {user} = useSelector((store)=>store.authSlice)
 
   useEffect(() => {
     getProductById(id)
@@ -73,7 +74,7 @@ export function ProductDetails() {
             <ListGroup.Item>
               <Button
                 className="btn btn-dark col-12"
-                disabled={product.quantity === 0}
+                disabled={product.quantity === 0 || (user && user.role == "admin") }
                 type="button"
                 onClick={handleAddToCart}
               >

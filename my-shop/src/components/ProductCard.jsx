@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import React from "react";
 import Rating from "./Rating";
 import { FaEdit } from "react-icons/fa";
@@ -10,7 +10,9 @@ import { useSelector } from "react-redux";
 export default function ProductCard({ product, children }) {
   const { user } = useSelector((store) => store.authSlice);
 
-  
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <Card className="my-3 p-3 rounded">
@@ -38,6 +40,16 @@ export default function ProductCard({ product, children }) {
         <Card.Text as="h3">{product.price}$</Card.Text>
         {children}
       </Card.Body>
+{ !user? <></>:!(user.role == "admin"   )?    <Card.Text>
+        <Button
+                className="btn btn-dark col-12"
+                disabled={product.quantity === 0}
+                type="button"
+                onClick={handleAddToCart}
+              >
+                Add To Cart
+              </Button>
+        </Card.Text>:<></>}
     </Card>
   );
 }
